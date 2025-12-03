@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+#!/usr/bin/env python3
 """Helper function to return start and end indixes of pagination"""
 
 from typing import Tuple
