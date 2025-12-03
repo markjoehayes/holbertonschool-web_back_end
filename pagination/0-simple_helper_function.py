@@ -1,6 +1,9 @@
 #!/usr/bin/python3
 """Helper function to return start and end indixes of pagination"""
 
+from typing import Tuple
+
+
 def index_range(page: int, page_size: int) -> tuple:
     """Calculate the start and end index for pagnination and return a tuple"""
     #calculate the start index
