@@ -31,7 +31,7 @@ class Server:
         return data[pagination_range[0] : pagination_range[1]]
 
 
-    def index_range(page: int, page_size: int) -> tuple[int, int]:
+    def index_range(page: int, page_size: int) -> Tuple[int, int]:
         """Calculate the start and end index for pagnination and return a tuple"""
 
         if page < 1 or page_size < 1:
