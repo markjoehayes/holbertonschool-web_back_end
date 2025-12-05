@@ -25,13 +25,13 @@ class Server:
         assert isinstance(page, int) and page > 0
         assert isinstance(page_size, int) and page_size > 0
 
-        pagination_range: Tuple = self.index_range(page, page_size)
-        data: List = self.dataset()
+        self.dataset()
+        correct_index = index_range(page, page_size)
+        if correct_index[0] > len(self.__dataset):
+            return []
+        return self.__dataset[correct_index[0]:correct_index[1]]
 
-        return data[pagination_range[0] : pagination_range[1]]
-
-
-    def index_range(page: int, page_size: int) -> Tuple[int, int]:
+    def index_range(page: int, page_size: int) -> tuple[int, int]:
         """Calculate the start and end index for pagnination and return a tuple"""
 
         if page < 1 or page_size < 1:
