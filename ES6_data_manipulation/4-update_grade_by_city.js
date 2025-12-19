@@ -8,7 +8,7 @@ export default function updateStudentGradeByCity(studentList, city, newGrades) {
                 student.grade = person.grade;
             }
         });
-        if (student.grade = undefined) {
+        if (student.grade === undefined) {
             student.grade = 'N/A';
         }
         return student;
