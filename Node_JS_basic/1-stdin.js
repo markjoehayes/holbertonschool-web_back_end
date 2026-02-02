@@ -10,4 +10,3 @@ process.stdin.on('end', () => {
   // Only print closing message for piped input
   process.stdout.write('This important software is now closing\n');
 });
-
