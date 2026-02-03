@@ -33,16 +33,12 @@ class Server:
         """Get corresponding page"""
         assert isinstance(page, int) and page > 0
         assert isinstance(page_size, int) and page_size > 0
-
         # Get the dataset
         dataset = self.dataset()
-        
         # Get the start and end indices
         start_index, end_index = self.index_range(page, page_size)
-        
         # Check if start_index is beyond dataset length
         if start_index >= len(dataset):
             return []
-        
         # Return the page slice
         return dataset[start_index:end_index]
