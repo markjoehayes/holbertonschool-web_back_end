@@ -3,7 +3,6 @@ import csv
 import math
 from typing import Tuple, List
 
-
 class Server:
     """Server class to paginate a database of popular baby names."""
     DATA_FILE = "Popular_Baby_Names.csv"
