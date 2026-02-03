@@ -1,0 +1,14 @@
+// 100-find.js
+// Script to find documents with name starting by Holberton
+
+// Use the database passed as argument
+db = db.getSiblingDB(db.getName());
+
+// Find documents in school collection where name starts with "Holberton"
+// Using regular expression with case-insensitive option
+db.school.find({ 
+    name: { 
+        $regex: /^Holberton/, 
+        $options: 'i' 
+    } 
+});
